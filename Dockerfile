@@ -6,6 +6,7 @@ RUN apt-get update -yqq && \
   vim
 
 COPY Gemfile* /usr/src/app/
+ENV BUNDLE_PATH /gems
 WORKDIR /usr/src/app
 RUN bundle install
 
